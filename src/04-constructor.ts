@@ -1,12 +1,11 @@
 export class MyDate {
-
   //In the constructor, we can assign default values to the parameters and access them directly
   constructor(
     private day: number = 1,
     private month: number = 1,
-    private year: number = 1924,
+    private year: number = 1924
   ) {}
-  
+
   // Add a method to the class
 
   // Getter and setter
@@ -49,6 +48,11 @@ export class MyDate {
         return new MyDate(this.day, this.month, this.year + amount);
     }
   }
+
+  isLeapYear = (year: number): boolean => {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  };
+  
 }
 
 let date= new MyDate();
@@ -57,4 +61,6 @@ date = new MyDate(9, 9, 1975);
 console.log(date.myDateFormattedZeroPadded()); // Output: "09/09/1975"
 date = new MyDate(undefined,undefined,1996);
 console.log(date.myDateFormattedZeroPadded()); // Output: "01/01/1996"
+console.log(date.isLeapYear(2020)); // Output: true
+console.log(date.isLeapYear(2021)); // Output: false
 
