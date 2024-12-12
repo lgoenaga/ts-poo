@@ -1,4 +1,4 @@
-export class animal {
+export abstract class animal {
 
     constructor(protected name: string) {
 
@@ -56,6 +56,9 @@ export class grupoAnimal extends animal {
 
 console.log('Animal class loaded');
 console.log('-------------------');
+
+// Abstract classes are classes that cannot be instantiated, but can be inherited.
+/*
 const mamifero = new animal('Felino');
 mamifero.greeting();
 mamifero.move();
@@ -64,6 +67,7 @@ mamifero.setName = 'Canino';
 mamifero.greeting();
 mamifero.move();
 console.log('-------------------');
+*/
 const carnivoro = new grupoAnimal('Lion', 'Carnivore');
 carnivoro.greeting();
 carnivoro.move();
