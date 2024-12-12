@@ -36,7 +36,7 @@ export class grupoAnimal extends animal {
         console.log(`He is a ${this.name} and he is ${this.tipo}, he is eating`);
         this.sleep();
     }
-    
+
     public set setName(value: string) {
         this.name = value;
     }
@@ -65,7 +65,7 @@ mamifero.greeting();
 mamifero.move();
 console.log('-------------------');
 const carnivoro = new grupoAnimal('Lion', 'Carnivore');
-carnivoro.eat();
+carnivoro.greeting();
 carnivoro.move();
 carnivoro.eat();
 carnivoro.setName = 'Crocodile';
