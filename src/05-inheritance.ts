@@ -1,6 +1,6 @@
 export class animal {
 
-    constructor(public name: string) {
+    constructor(protected name: string) {
 
     }
 
@@ -15,7 +15,7 @@ export class animal {
 
 export class grupoAnimal extends animal {
     constructor(
-        name: string,
+        public name: string,
         public tipo: string) {
         super(name);
     }
@@ -27,7 +27,7 @@ export class grupoAnimal extends animal {
 
 console.log('Animal class loaded');
 console.log('-------------------');
-const mamifero = new animal('Dog');
+const mamifero = new animal('Felino');
 mamifero.greeting();
 mamifero.move();
 console.log('-------------------');
@@ -35,3 +35,7 @@ const carnivoro = new grupoAnimal('Lion', 'Carnivore');
 carnivoro.greeting();
 carnivoro.move();
 carnivoro.eat();
+carnivoro.name = 'Crocodile';
+carnivoro.tipo = 'Reptile';
+carnivoro.eat();
+
